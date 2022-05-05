@@ -14,6 +14,9 @@
     </style>
 </head>
 <body>
+    <a style="float:right" href="{{Route('post.add')}}"><button>BACK</button></a>
+    <a style="float:left" href="{{Route('post.list')}}"><button>LIST</button></a>
+    {{-- <a style="float:left" href="{{Route('post.list')}}"><button>ADD</button></a> --}}
     <form action="{{route('post.update')}}" method="post">
         <input type="hidden" name="id" value="{{$posts->id}}">
     @csrf

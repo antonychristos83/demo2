@@ -14,7 +14,10 @@
     </style>
 </head>
 <body>
-    <form action="{{route('post.save')}}" method="post">
+<body>
+   <a style="float:right" href="{{Route('post.list')}}"><button class="btn btn-success">LIST</button></a>
+   
+   <form action="{{route('post.save')}}" method="post">
     @csrf
     <div class="row">
         <div class="col">

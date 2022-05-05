@@ -26,6 +26,7 @@
     </style>
 </head>
 <body>
+    <a style="float:left" href="{{Route('post.add')}}"><button class="btn-warning">BACK</button></a>
     <center>
         <table>
             <tr>

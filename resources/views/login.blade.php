@@ -14,19 +14,25 @@
     </style>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="login-user" method="post">
+        @if(Session::has('Success'))
+    <br><br><center><b><span class="alert alert-success">{{Session::get('Success')}}</span></b></center>
+    @endif 
+    @if(Session::has('fail'))
+    <div class="alert alert-danger">{{Session::get('fail')}}</div>
+    @endif
     @csrf
     <div class="row">
         <div class="col">
             <input style="width:50%" class="form-control" type="email" name="email" placeholder="Email"><br>
+            <span class="text-danger">@error('email'){{$message}}@enderror</span>
             <input style="width:50%" class="form-control" type="password" name="password" placeholder="Password"><br>
+            <span class="text-danger">@error('password'){{$message}}@enderror</span>
             <input class="btn-success" type="submit" value="LOGIN">
         </div>
     </div>
     </form>
-    {{-- @if(Session::has('post_add'))
-    <br><br><center><b><span class="alert alert-success">{{Session::get('post_add')}}</span></b></center>
-    @endif --}}
+    
     
 </body>
 </html>

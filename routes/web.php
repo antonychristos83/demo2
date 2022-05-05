@@ -26,3 +26,8 @@ Route::post('/update-post',[PostContoller::class,'update'])->name('post.update')
 Route::get('/delete-post/{id}',[PostContoller::class,'destroy'])->name('post.delete');
 Route::get('/login',[AuthController::class,'login']);
 Route::get('/register',[AuthController::class,'register']);
+
+
+Route::post('/register-user',[AuthController::class,'registerUser'])->name('register-user');
+Route::post('/login-user',[AuthController::class,'LoginUser'])->name('login-user');
+Route::get('/logout',[AuthController::class,'logout']);
